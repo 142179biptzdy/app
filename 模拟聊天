@@ -11,7 +11,6 @@
         var oTxt = document.getElementById('txt1');
         var oImg = document.getElementById('smallImg');
         var flag = false;
-        
         oImg.onclick = function (){
             if(flag){
                 this.src = 'http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/1.png';
@@ -21,20 +20,14 @@
                 flag = true;
             }
         };
-
         oBtn.onclick = function (){
-
             if(flag){
                 str = '<p class="fl"><img src="http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/2.png">'+oTxt.value+'</p>';
                 oTxt.value = '';
-                
-                
             }else{
-               
                 str = '<p class="fr"><img src="http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/1.png">'+oTxt.value+'</p>';
                 oTxt.value = '';
             }
-
 					oDiv.innerHTML = str + oDiv.innerHTML;//让新消息保持最前
         };
     };
@@ -46,14 +39,45 @@
         #div1{width:250px; height:200px; border:1px solid red; overflow:auto;}
         #div1 p{height:auto; background:blue; width:150px; margin-bottom:10px;} 
     </style>
+	<link id="jqueryplugins5_jquery_uploadify_32" rel="stylesheet" type="text/css" class="library" href="/js/sandbox/jquery-plugins/uploadify/uploadify.css">
+	<link id="others_extjs_411a" rel="stylesheet" type="text/css" class="library" href="/js/sandbox/extjs/resources/css/ext-all.css">
+	<script id="others_extjs_411a" type="text/javascript" class="library" src="/js/sandbox/extjs/ext-all.js"></script>
+	<script id="others_processing_141" type="text/javascript" class="library" src="/js/sandbox/other/processing-1.4.1.min.js"></script>
+	<script id="wind_070" type="text/javascript" class="library" src="/js/sandbox/wind.js/wind-builderbase.js"></script>
+	<script id="wind_070" type="text/javascript" class="library" src="/js/sandbox/wind.js/wind-core.js"></script>
+	<script id="wind_070" type="text/javascript" class="library" src="/js/sandbox/wind.js/wind-compiler.js"></script>
+	<script id="jqueryplugins5_jquery_uploadify_32" type="text/javascript" class="library" src="/js/sandbox/jquery-plugins/uploadify/jquery.uploadify.min.js"></script>
+	<script id="wind_070" type="text/javascript" class="library" src="/js/sandbox/wind.js/wind-async.js"></script>
+	<script id="jqueryplugins1_jquery_cookie_13" type="text/javascript" class="library" src="/js/sandbox/jquery-plugins/jquery.cookie-1.3.js"></script>
+	<script id="jqueryplugins3_jquery_cookies_220" type="text/javascript" class="library" src="/js/sandbox/jquery-plugins/jquery.cookies.2.2.0.min.js"></script>
+	<script id="jqueryplugins2_jqueryform_282" type="text/javascript" class="library" src="/js/sandbox/jquery-plugins/jquery.form-2.82.js"></script>
+	<script id="jquery_182" type="text/javascript" class="library" src="/js/sandbox/jquery/jquery-1.8.2.min.js"></script>
 </head>
 <body>
     <div id="div1">
-     
     </div>
     <img src="http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/1.png" height="24" width="24" alt="" id="smallImg" />
     <input type="text"  id="txt1" value="" />
     <input type="button" value="发送" id="btn1" />
-
 </body>
+</html>
+<html>
+
+<head>
+
+<title>JS实现简单的时钟</title>
+<script>
+
+    function displayTime() {
+        document.getElementById("time").innerHTML = new Date().toTimeString();
+    } 
+
+    setInterval(displayTime,1000);      // 每隔1秒钟调用displayTime函数
+</script>
+</head>
+
+<body>
+    <p id="time"></p>
+</body>
+
 </html>
