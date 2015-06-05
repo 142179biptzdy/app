@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <script>
+    window.onload = function (){
+        var oDiv = document.getElementById('div1');
+        var oBtn = document.getElementById('btn1');
+        var oTxt = document.getElementById('txt1');
+        var oImg = document.getElementById('smallImg');
+        var flag = false;
+        
+        oImg.onclick = function (){
+            if(flag){
+                this.src = 'http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/1.png';
+                flag = false;
+            }else{
+                this.src = 'http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/2.png';
+                flag = true;
+            }
+        };
+
+        oBtn.onclick = function (){
+
+            if(flag){
+                str = '<p class="fl"><img src="http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/2.png">'+oTxt.value+'</p>';
+                oTxt.value = '';
+                
+                
+            }else{
+               
+                str = '<p class="fr"><img src="http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/1.png">'+oTxt.value+'</p>';
+                oTxt.value = '';
+            }
+
+					oDiv.innerHTML = str + oDiv.innerHTML;//让新消息保持最前
+        };
+    };
+    </script>
+    <style>
+        *{margin:0; padding:0;}
+        .fl{float:left;}
+        .fr{float:right;}
+        #div1{width:250px; height:200px; border:1px solid red; overflow:auto;}
+        #div1 p{height:auto; background:blue; width:150px; margin-bottom:10px;} 
+    </style>
+</head>
+<body>
+    <div id="div1">
+     
+    </div>
+    <img src="http://sandbox.runjs.cn/uploads/rs/320/o4hcxczl/1.png" height="24" width="24" alt="" id="smallImg" />
+    <input type="text"  id="txt1" value="" />
+    <input type="button" value="发送" id="btn1" />
+
+</body>
+</html>
