@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<html>
+
+<head>
+
+<title>JS实现简单的时钟</title>
+<script>
+
+    function displayTime() {
+        document.getElementById("time").innerHTML = new Date().toTimeString();
+    } 
+
+    setInterval(displayTime,1000);      // 每隔1秒钟调用displayTime函数
+</script>
+</head>
+
+<body>
+    <p id="time"></p>
+</body>
+	<script language="javascript">
+
+
+function displayinfo(){
+        var who=document.emails.list.options[document.emails.list.selectedIndex].value;
+        var address=document.emails.address;
+        var info=document.emails.information;
+        var ss="@yourdomain.com";
+        
+if (who=="webmaster"){
+                address.value="webmaster"+ss;
+                info.value="Send email with problems and questions about this web site to this address.";}
+if (who=="bteditor"){
+                address.value="barrington"+ss;
+                info.value="Send email about the editorial content of the Barrington Times to this address.";}
+if (who=="bpeditor"){
+                address.value="bristol"+ss;
+                info.value="Send email about the editorial content of the Bristol Phoenix to this address.";}
+if (who=="steditor"){
+                address.value="sakonnet"+ss;
+                info.value="Send email about the editorial content of the Sakonnet Times to this address.";}
+if (who=="wteditor"){
+                address.value="warren"+ss;
+                info.value="Send email about the editorial content of the Warren Times-Gazette to this address.";}
+if (who=="publisher"){
+                address.value="matthayes"+ss;
+                info.value="Send email about the operations of our newspapers to this address.";}
+if (who=="subscriptions"){
+                address.value="subscriptions"+ss;
+                info.value="Send email requesting a subscription, back issue or related information to this address.";}
+if (who=="classifieds"){
+                address.value="classifieds"+ss;
+                info.value="Send email requesting a classified line ad, reporting a missing line ad, or requesting classified information to this address.";}
+if (who=="info"){
+                address.value="info"+ss;
+                info.value="Send email requesting any information which is not covered elsewhere to this address.";}
+if (who=="tips"){
+                address.value="webmaster"+ss;
+                info.value="Send email about a potential news story to this address.";}
+if (who=="advertising"){
+                address.value="sales"+ss;
+                info.value="Send email about advertising in our printed newspapers to this address";}
+}
+
+
+</script>
+<FORM name="emails">
+
+<P><B>请选择收信人</B>
+<BR>
+<SELECT NAME="list" onBlur="displayinfo()">
+<OPTION value="nameoflist">EBN Email Directory
+<OPTION value="webmaster">Webmaster
+<OPTION value="bteditor">Barrington Times Editor
+<OPTION value="bpeditor">Bristol Phoenix Editor
+<OPTION value="steditor">Sakonnet Times Editor
+<OPTION value="wteditor">Warren Times-Gazette Editor
+<OPTION value="publisher">Publisher
+<OPTION value="subscriptions">Subscriptions/Circulation
+<OPTION value="classifieds">Classified Office
+<OPTION value="info">Information Requests
+<OPTION value="tips">News Tips
+<OPTION value="advertising">Advertising Sales Department
+</SELECT>
+<TABLE BORDER WIDTH="300" BGCOLOR="#CCFFFF" >
+<TR>
+<TD VALIGN=TOP>
+<CENTER>
+<INPUT TYPE="text" NAME="address" VALUE="" SIZE=45><BR>
+<TEXTAREA NAME="information" ROWS=7 COLS=27 wrap=virtual></TEXTAREA><BR>
+<INPUT TYPE="button" NAME="sendit" VALUE="发信" onClick="parent.location='mailto:'+document.emails.address.value">
+</CENTER>
+</TD>
+</TR>
+</TABLE> </FORM>
+
+
+
+
+</html>
